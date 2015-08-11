@@ -9,10 +9,28 @@
     Background="Black"
     
   >
-    
 
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Image x:Name="MainImage" Stretch="UniformToFill" Source="Assets/Samples/1.png" />
+
+    <Grid Background="Black" >
+        <Image x:Name="MainImage" Stretch="UniformToFill" Source="Assets/Samples/1.png" >
+        </Image>
+        <Grid.Resources>
+            <Storyboard x:Name="ImageFadeOut">
+
+                <DoubleAnimation
+                      Storyboard.TargetName="MainImage"
+                      Storyboard.TargetProperty="Opacity"
+                      From="1.0" To="0.0" Duration="0:0:5"
+                      />
+            </Storyboard>
+            <Storyboard x:Name="ImageFadeIn">
+                <DoubleAnimation
+                      Storyboard.TargetName="MainImage"
+                      Storyboard.TargetProperty="Opacity"
+                      From="0.0" To="1.0" Duration="0:0:5"
+                      />
+            </Storyboard>
+        </Grid.Resources>
     </Grid>
 </Page>

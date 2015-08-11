@@ -53,11 +53,12 @@ namespace PhotoFrame
             try
             {
 
-
                 await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync( CoreDispatcherPriority.Normal, async () =>
                     {
+                        ImageFadeOut.Begin();
                         var image = await _imageSource.NextImage();
                         this.MainImage.Source = image;
+                        ImageFadeIn.Begin();
                     });
 
 
