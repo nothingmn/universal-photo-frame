@@ -35,7 +35,7 @@ namespace PhotoFrame
             _imageSource = new SampleImageSource();
             //_imageSource = new FlickrImageSource();
 
-            _timer = new Timer(Callback, null, TimeSpan.FromMilliseconds(5000), TimeSpan.FromMilliseconds(5000));
+            _timer = new Timer(Callback, null, TimeSpan.FromSeconds(5), TimeSpan.FromMinutes(10));
 
         }
 
