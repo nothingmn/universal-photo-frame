@@ -33,6 +33,8 @@ namespace PhotoFrame
                 Microsoft.ApplicationInsights.WindowsCollectors.Session);
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+
+            
         }
 
         /// <summary>
