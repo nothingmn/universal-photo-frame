@@ -33,12 +33,14 @@ namespace PhotoFrame
         {
             this.InitializeComponent();
 
-            _imageSource = new SampleImageSource();
-            //_imageSource = new FlickrImageSource();
+            //_imageSource = new SampleImageSource();
+            _imageSource = new FlickrImageSource();
+            (_imageSource as FlickrImageSource).Randomize = true;
+
 
             _weatherProvder = new ForecastIOWeatherProvider("e00f670f07d9d46cb17b239cfb178bf1");
 
-            _timer = new Timer(Callback, null, TimeSpan.FromSeconds(5), TimeSpan.FromMinutes(10));
+            _timer = new Timer(Callback, null, TimeSpan.FromSeconds(5), TimeSpan.FromMinutes(5));
             _timeTimer = new Timer(UpdateTime, null, TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(1));
             _weatherTimer = new Timer(UpdateWeather, null, TimeSpan.FromSeconds(5), TimeSpan.FromMinutes(61));
 

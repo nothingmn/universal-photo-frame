@@ -30,7 +30,7 @@
                       />
             </Storyboard>
         </Grid.Resources>
-        <Image x:Name="MainImage" Stretch="UniformToFill" Source="Assets/Samples/1.png" Grid.Row="0" Grid.Column="0" >
+        <Image x:Name="MainImage" Stretch="Uniform" Source="Assets/Samples/1.png" Grid.Row="0" Grid.Column="0" >
         </Image>
         <Grid x:Name="TimeGrid" VerticalAlignment="Bottom" HorizontalAlignment="Left">
             <Grid.RowDefinitions>
