@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C1675497-E798-452B-A428-6F6A96D51210}</ProjectGuid>
+    <ProjectGuid>{6541F0EA-26CB-4450-8892-4586AEEF5515}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PhotoFrame.Common</RootNamespace>
-    <AssemblyName>PhotoFrame.Common</AssemblyName>
+    <RootNamespace>PhotoFrame.Forecastio</RootNamespace>
+    <AssemblyName>PhotoFrame.Forecastio</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion>10.0.10240.0</TargetPlatformVersion>
@@ -113,16 +113,20 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IBasicWeatherReport.cs" />
-    <Compile Include="IImageSource.cs" />
-    <Compile Include="IWeatherProvider.cs" />
+    <Compile Include="Forecast.cs" />
+    <Compile Include="ForecastIOWeatherProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Content Include="Properties\PhotoFrame.Common.rd.xml" />
+    <Content Include="Properties\PhotoFrame.Forecastio.rd.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PhotoFrame.Common\PhotoFrame.Common.csproj">
+      <Project>{C1675497-E798-452B-A428-6F6A96D51210}</Project>
+      <Name>PhotoFrame.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
-  <PropertyGroup />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

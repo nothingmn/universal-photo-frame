@@ -13,8 +13,6 @@
 
 
     <Grid Background="Black" >
-        <Image x:Name="MainImage" Stretch="UniformToFill" Source="Assets/Samples/1.png" >
-        </Image>
         <Grid.Resources>
             <Storyboard x:Name="ImageFadeOut">
 
@@ -32,5 +30,23 @@
                       />
             </Storyboard>
         </Grid.Resources>
+        <Image x:Name="MainImage" Stretch="UniformToFill" Source="Assets/Samples/1.png" Grid.Row="0" Grid.Column="0" >
+        </Image>
+        <Grid x:Name="TimeGrid" VerticalAlignment="Bottom" HorizontalAlignment="Left">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock x:Name="TimeText" HorizontalAlignment="Left" Foreground="DarkBlue"  FontSize="50" Grid.Row="0"   />
+        </Grid>
+
+        <Grid x:Name="WeatherGrid" VerticalAlignment="Bottom" HorizontalAlignment="Right">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock x:Name="Current" HorizontalAlignment="Right" Foreground="DarkBlue"  FontSize="50" Grid.Row="0"   />
+            <TextBlock x:Name="Summary" HorizontalAlignment="Right" Foreground="DarkBlue"  FontSize="50"  Grid.Row="1"   />
+        </Grid>
+
     </Grid>
 </Page>

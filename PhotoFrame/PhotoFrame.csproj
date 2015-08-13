@@ -146,6 +146,10 @@
       <Project>{B73D596D-7071-4903-817C-7EBBD39B265D}</Project>
       <Name>PhotoFrame.FlickrSource</Name>
     </ProjectReference>
+    <ProjectReference Include="..\PhotoFrame.Forecastio\PhotoFrame.Forecastio.csproj">
+      <Project>{6541F0EA-26CB-4450-8892-4586AEEF5515}</Project>
+      <Name>PhotoFrame.Forecastio</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
