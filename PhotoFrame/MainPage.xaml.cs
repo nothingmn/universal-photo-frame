@@ -68,7 +68,7 @@ namespace PhotoFrame
             await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
                 delegate
                 {
-                    TimeText.Text = DateTime.Now.ToString("R");
+                    TimeText.Text = DateTime.Now.ToString("F");
                 });
         }
 
